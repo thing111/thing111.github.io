@@ -5,6 +5,8 @@
  */
 package restaurant;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Tyler Masthay
@@ -18,18 +20,19 @@ public class Customer {
     }
     
     public void walkIn(String hostName){
-        
+        System.out.println("Can we get a table?");
     }
     
     public int getKidNum(){
         return numKids;
     }
     public String getName(){
-        return "nope";
+        return name;
     }
 
     String order() {
-       return "nope"; 
+       Scanner in = new Scanner(System.in);
+       return in.next();
     }
 
     String scold(String name, int i) {
@@ -37,7 +40,7 @@ public class Customer {
     }
 
     void pay(int amount, String waiterName) {
-        
+        System.out.printf("Thank you %s. Here is $%d", waiterName, amount);
     }
     
 }
