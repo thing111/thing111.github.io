@@ -3,8 +3,8 @@ package restaurant;
 public class Waiter {
     private String name;
     
-    Waiter(String tom) {
-        
+    Waiter(String theName) {
+        name = theName;
     }
     
     public String getName(){
@@ -12,11 +12,11 @@ public class Waiter {
     }
 
     void greetCustomer(String name) {
-        
+        System.out.println("Welcome to Robot Pizza " + name);
     }
 
     void correct(String name) {
-        
+        System.out.println("I'm sorry, " + name + " but that item is not on the menu.");
     }
 
     void pinOrder(Chef chef, String item1) {
