@@ -6,18 +6,20 @@ public class Chef {
     ArrayList<String> pendingOrders = new ArrayList<>();
     
     Chef(String theName) {
-        
+        name = theName;
     }
     
     public String getName(){
-        return "nope";
+        return name;
     }
     
     public String cook(String item){
-        return "done";
+        pendingOrders.remove(item);
+        return "Your order" + item + " is ready";
     }
     
     public void addOrder(String item){
+        pendingOrder.add(item);
     
     }
 }
