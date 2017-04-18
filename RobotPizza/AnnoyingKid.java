@@ -1,23 +1,27 @@
 package restaurant;
 
+/**
+ *
+ * @author Cody
+ */
 public class AnnoyingKid {
 
-    private String theName;
+    private String name;
     
     AnnoyingKid(String theName) {
-        
+        name = theName;
     }
     
-    public String politelyOrder(){
-        return "nope";
+    public void politelyOrder(){
+        System.out.println("I, " + name + " would like an Asiago Ranch Chicken Club.");
     }
     
-    public String misbehave(){
-        return "nope";
+    public void misbehave(){
+        System.out.println("Your boi would like your got damn ice cream machine to work.");
     }
 
     String getName() {
-        return "nope";
+        return name;
     }
     
 }
