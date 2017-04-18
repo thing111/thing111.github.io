@@ -1,0 +1,57 @@
+Tyler Masthay
+Robot Pizza Inc. Dialogue Simulator
+	Robot Pizza Inc. is a multibillion dollar corporation headquartered in Dayton, Ohio that is undergoing some changes to their business model due to customer feedback. In a scathing review one customer said “the food is great, but they really do live up to their name…their servers are completely impersonal robots.” Kevin Geronimo, founder of Pizza Inc., is taking this to heart and in response, wants to create actual robots for his staff but which sound friendly since he’s given up trying to make his workers more polite. Since he knows that getting the robots fully transitioned will take a year or two, he wants a software simulator of a typical transaction at his restaurant to see his plan in action before he makes his final decision to transition to robots. He wants a typical customer taking his two kids out to lunch and interacting with a host, waiter, and chef. We have one month to complete this project.
+
+We have six classes that need to be implemented:
+1.	Customer
+2.	First Kid
+3.	Second Kid
+4.	Host
+5.	Waiter
+6.	Chef
+
+We simulate the following dialogue:
+1.	Customer walks into Robot Pizza, Inc. and asks the host for a seat
+2.	Host politely greets customer and asks how many seats are needed
+3.	Host responds and finds a table for the customer and his two kids
+4.	Waiter introduced to customer and kids, gets order
+5.	Customer and well-behaved child order. Misbehaving child decides to tell the waiter jokes, getting scolded by the parent until eventually the parent orders for the child. The waiter remains polite the whole time.
+6.	Waiter communicates with chef for orders.
+7.	After the chef is done cooking, the waiter takes the food out to the parent and kids
+8.	Parent pays and says goodbye to waiter and host
+
+We have the following methods for each class (constructors in interface are straightforward setting):
+ 
+
+1.	Customer
+a.	walkIn() – simply asks host for table
+b.	:int getKidNum() – getter for numKids data member
+c.	:String getName() – getter for name data member
+d.	:String order() – communicates with stdin to get input from customer
+e.	:String scold(kidName, scoldNumber) – scolds misbehaving kid via some message
+f.	pay(amount,name) – pays amount to waiter with name via print statement
+2.	First Kid (GoodKid class)
+a.	:String getName() – getter for name data member
+b.	:String order() – communicates with stdin to get input from customer
+3.	Second Kid (AnnoyingKid class)
+a.	:String getName() – getter for name data member
+b.	:String politelyOrder() – method for when kid decides to non-sarcastically order
+c.	:String misbehave() – method for when kid decides to crack a joke instead of ordering
+4.	Host 
+a.	:String getName() – getter for name data member
+b.	greetCustomer() – simple greet statement via stdout
+c.	:int getTableSize(customer) – uses customer data member to find out how many to seat
+d.	seat() – simple statement to stdout to generically seat customers
+e.	notifyWaiter(waiter) – simple print statement to address waiter to serve customers
+f.	goodbye() – simple print statement to say goodbye to the customer and kids
+5.	Waiter
+a.	:String getName() – getter for name data member
+b.	greetCustomer() – simple print statement to generically greet table
+c.	correct() – generic statement for errored order by customer
+d.	pinOrder(chef,item) – adds order item to chefs list of pending jobs
+e.	serve(item,name) – statement to simulate waiter serving customer their item
+f.	goodbye() – generic statement to say goodbye to customer
+6.	Chef
+a.	:String getName() – getter for name data member
+b.	:String cook(item) – cooks item and returns status string so that waiter can update 
+
