@@ -20,15 +20,15 @@ public class Waiter {
     }
 
     void pinOrder(Chef chef, String item1) {
-        
+        chef.addOrder(item1);
     }
 
     void serve(String item1, String name) {
-        
+        System.out.println("Here's your " + item1 + " " + name);
     }
 
     void goodbye() {
-        
+        System.out.println("Good riddance");
     }
     
 }
